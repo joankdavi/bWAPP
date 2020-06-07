@@ -3,7 +3,7 @@ image:
   context: mysql
 ports:
 - port: 8001
-  onOpen: open-preview
+  onOpen: ignore
 checkoutLocation: "bWAPP"
 workspaceLocation: "."
 tasks:
