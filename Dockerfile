@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full:latest
 
-USER root
+USER gitpod
 
 RUN apt-get update && apt-get -y install apache2 mysql-server
 # Install MySQL
@@ -16,8 +16,6 @@ RUN addgroup gitpod www-data
 
 # By default start up apache in the foreground, override with /bin/bash for interative.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
-
-USER gitpod
 
 RUN rm -rf /app
 
