@@ -3,6 +3,10 @@ image:
   context: mysql
 ports:
 - port: 8001
+  onOpen: open-browser
+- port: 3306
+  onOpen: ignore
+- port: 33060
   onOpen: ignore
 checkoutLocation: "bWAPP"
 workspaceLocation: "."
