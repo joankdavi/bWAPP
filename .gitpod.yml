@@ -2,9 +2,15 @@ image:
   file: Dockerfile
   context: mysql
 ports:
-- port: 80
+- port: 8001
   onOpen: open-preview
+checkoutLocation: "bWAPP"
+workspaceLocation: "."
 tasks:
+- name: MySQL
+  command: >
+    mysqld --initialize-insecure;
+    mysqld;
 - name: Terminal
   command: >
     echo "";
