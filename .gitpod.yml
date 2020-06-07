@@ -26,5 +26,6 @@ tasks:
     apachectl start &&
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
 - name: Install
+  init: service mysqld start
   command: >
-    n=1; while [ $n -le 2 ]; do pgrep -x mysqld >/dev/null && curl http:/localhost:8001/install.php?install=yes && n=$(( n+1 )); done;
+    curl http:/localhost:8001/install.php?install=yes
