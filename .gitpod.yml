@@ -28,4 +28,4 @@ tasks:
 - name: Install
   init: service mysql start
   command: >
-    curl http:/localhost:8001/install.php?install=yes
+    echo "curl http:/localhost:8001/install.php?install=yes" | at now + 1 minute 
