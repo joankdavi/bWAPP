@@ -1,5 +1,6 @@
 image:
   file: Dockerfile
+  context: mysql
 ports:
 - port: 80
   onOpen: open-preview
